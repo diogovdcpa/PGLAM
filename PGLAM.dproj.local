@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2018/03/05 23:27:27.000.846,=C:\Users\PC\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2018/03/15 12:29:10.000.912,=C:\Users\PC\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2018/03/16 23:04:12.000.136,=C:\Users\PC\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2018/03/16 23:05:01.000.780,C:\Users\PC\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\PGLAM\SYS\u_menu.dfm</Transaction>
+    <Transaction>2018/03/16 23:05:01.000.780,C:\Users\PC\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\PGLAM\SYS\u_menu.pas</Transaction>
+    <Transaction>2018/03/16 23:05:10.000.005,C:\Users\PC\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\PGLAM\SYS\PGLAM.dproj</Transaction>
+    <Transaction>2018/03/16 23:19:08.000.460,=C:\PGLAM\SYS\Unit1.pas</Transaction>
+    <Transaction>2018/03/16 23:19:27.000.672,C:\PGLAM\SYS\Unit1.pas=C:\PGLAM\SYS\u_config.pas</Transaction>
+    <Transaction>2018/03/16 23:19:27.000.672,C:\PGLAM\SYS\Unit1.dfm=C:\PGLAM\SYS\u_config.dfm</Transaction>
+    <Transaction>2018/03/18 13:21:05.000.515,=C:\PGLAM\SYS\Unit1.pas</Transaction>
+    <Transaction>2018/03/18 13:21:49.000.369,C:\PGLAM\SYS\u_cad_protocolo.dfm=C:\PGLAM\SYS\Unit1.dfm</Transaction>
+    <Transaction>2018/03/18 13:21:49.000.369,C:\PGLAM\SYS\u_cad_protocolo.pas=C:\PGLAM\SYS\Unit1.pas</Transaction>
+    <Transaction>2018/03/18 13:23:25.000.746,=C:\PGLAM\SYS\Unit1.pas</Transaction>
+    <Transaction>2018/03/18 13:23:35.000.397,C:\PGLAM\SYS\udm.pas=C:\PGLAM\SYS\Unit1.pas</Transaction>
+    <Transaction>2018/03/18 13:23:35.000.397,C:\PGLAM\SYS\udm.dfm=C:\PGLAM\SYS\Unit1.dfm</Transaction>
+    <Transaction>2018/03/18 15:09:18.000.413,=C:\PGLAM\SYS\Unit1.pas</Transaction>
+    <Transaction>2018/03/18 15:09:33.000.610,C:\PGLAM\SYS\udmRel.pas=C:\PGLAM\SYS\Unit1.pas</Transaction>
+    <Transaction>2018/03/18 15:09:33.000.610,C:\PGLAM\SYS\udmRel.dfm=C:\PGLAM\SYS\Unit1.dfm</Transaction>
+    <Transaction>2018/03/18 20:10:38.000.092,=C:\PGLAM\SYS\Unit1.pas</Transaction>
+    <Transaction>2018/03/18 20:13:04.000.557,C:\PGLAM\SYS\u_con_cad_protocolo.dfm=C:\PGLAM\SYS\Unit1.dfm</Transaction>
+    <Transaction>2018/03/18 20:13:04.000.550,C:\PGLAM\SYS\u_con_cad_protocolo.pas=C:\PGLAM\SYS\Unit1.pas</Transaction>
+    <Transaction>2018/03/21 00:08:26.000.301,=C:\PGLAM\SYS\Unit1.pas</Transaction>
+    <Transaction>2018/03/21 00:08:46.000.156,C:\PGLAM\SYS\Unit1.dfm=C:\PGLAM\SYS\u_cad_denuncia.dfm</Transaction>
+    <Transaction>2018/03/21 00:08:46.000.156,C:\PGLAM\SYS\Unit1.pas=C:\PGLAM\SYS\u_cad_denuncia.pas</Transaction>
+    <Transaction>2018/03/21 13:11:44.000.540,=C:\PGLAM\SYS\Unit1.pas</Transaction>
+    <Transaction>2018/03/21 13:12:01.000.277,C:\PGLAM\SYS\u_con_cad_denuncia.pas=C:\PGLAM\SYS\Unit1.pas</Transaction>
+    <Transaction>2018/03/21 13:12:01.000.277,C:\PGLAM\SYS\u_con_cad_denuncia.dfm=C:\PGLAM\SYS\Unit1.dfm</Transaction>
+    <Transaction>2018/03/21 13:22:33.000.946,=C:\PGLAM\SYS\Unit1.pas</Transaction>
+    <Transaction>2018/03/21 13:22:53.000.358,C:\PGLAM\SYS\u_cad_fiscalizacao.dfm=C:\PGLAM\SYS\Unit1.dfm</Transaction>
+    <Transaction>2018/03/21 13:22:53.000.358,C:\PGLAM\SYS\u_cad_fiscalizacao.pas=C:\PGLAM\SYS\Unit1.pas</Transaction>
+    <Transaction>2018/03/21 22:37:05.000.770,=C:\PGLAM\SYS\Unit1.pas</Transaction>
+    <Transaction>2018/03/21 22:37:17.000.786,C:\PGLAM\SYS\Unit1.pas=C:\PGLAM\SYS\u_cad_geo.pas</Transaction>
+    <Transaction>2018/03/21 22:37:17.000.786,C:\PGLAM\SYS\Unit1.dfm=C:\PGLAM\SYS\u_cad_geo.dfm</Transaction>
+    <Transaction>2018/03/21 23:35:41.000.059,=C:\PGLAM\SYS\Unit1.pas</Transaction>
+    <Transaction>2018/03/21 23:36:06.000.638,C:\PGLAM\SYS\Unit1.dfm=C:\PGLAM\SYS\u_cad_lic_rural.dfm</Transaction>
+    <Transaction>2018/03/21 23:36:06.000.638,C:\PGLAM\SYS\Unit1.pas=C:\PGLAM\SYS\u_cad_lic_rural.pas</Transaction>
+    <Transaction>2018/03/23 12:30:10.000.088,=C:\PGLAM\SYS\Unit1.pas</Transaction>
+    <Transaction>2018/03/23 12:30:24.000.990,C:\PGLAM\SYS\Unit1.pas=C:\PGLAM\SYS\u_cad_lic_amb.pas</Transaction>
+    <Transaction>2018/03/23 12:30:24.000.990,C:\PGLAM\SYS\Unit1.dfm=C:\PGLAM\SYS\u_cad_lic_amb.dfm</Transaction>
+    <Transaction>2018/03/24 11:30:29.000.765,=C:\PGLAM\SYS\Unit1.pas</Transaction>
+    <Transaction>2018/03/24 11:30:57.000.038,C:\PGLAM\SYS\Unit1.pas=C:\PGLAM\SYS\u_con_cad_fiscalizacao.pas</Transaction>
+    <Transaction>2018/03/24 11:30:57.000.054,C:\PGLAM\SYS\Unit1.dfm=C:\PGLAM\SYS\u_con_cad_fiscalizacao.dfm</Transaction>
+    <Transaction>2018/03/24 11:42:42.000.439,=C:\PGLAM\SYS\Unit1.pas</Transaction>
+    <Transaction>2018/03/24 11:42:58.000.163,C:\PGLAM\SYS\Unit1.pas=C:\PGLAM\SYS\u_con_cad_geo.pas</Transaction>
+    <Transaction>2018/03/24 11:42:58.000.163,C:\PGLAM\SYS\Unit1.dfm=C:\PGLAM\SYS\u_con_cad_geo.dfm</Transaction>
+    <Transaction>2018/03/24 11:51:58.000.426,=C:\PGLAM\SYS\Unit1.pas</Transaction>
+    <Transaction>2018/03/24 11:52:13.000.180,C:\PGLAM\SYS\Unit1.pas=C:\PGLAM\SYS\u_con_cad_lic_rural.pas</Transaction>
+    <Transaction>2018/03/24 11:52:13.000.180,C:\PGLAM\SYS\Unit1.dfm=C:\PGLAM\SYS\u_con_cad_lic_rural.dfm</Transaction>
+    <Transaction>2018/03/24 12:02:35.000.076,=C:\PGLAM\SYS\Unit1.pas</Transaction>
+    <Transaction>2018/03/24 12:02:51.000.850,C:\PGLAM\SYS\Unit1.dfm=C:\PGLAM\SYS\u_con_cad_lic_amb.dfm</Transaction>
+    <Transaction>2018/03/24 12:02:51.000.850,C:\PGLAM\SYS\Unit1.pas=C:\PGLAM\SYS\u_con_cad_lic_amb.pas</Transaction>
+  </Transactions>
+</BorlandProject>

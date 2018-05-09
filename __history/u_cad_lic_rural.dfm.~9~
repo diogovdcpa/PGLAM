@@ -1,0 +1,376 @@
+object frm_cad_lic_rural: Tfrm_cad_lic_rural
+  Left = 0
+  Top = 0
+  Caption = 'CADASTRO LICENCIAMENTO RURAL'
+  ClientHeight = 556
+  ClientWidth = 576
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poScreenCenter
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 8
+    Top = 56
+    Width = 78
+    Height = 13
+    Caption = 'N'#176' PROTOCOLO'
+    FocusControl = DBEdit1
+  end
+  object Label2: TLabel
+    Left = 309
+    Top = 56
+    Width = 111
+    Height = 13
+    Caption = 'DATA DO PROTOCOLO'
+    FocusControl = DBEdit2
+  end
+  object Label3: TLabel
+    Left = 8
+    Top = 91
+    Width = 37
+    Height = 13
+    Caption = 'IMOVEL'
+    FocusControl = DBEdit3
+  end
+  object Label4: TLabel
+    Left = 8
+    Top = 128
+    Width = 50
+    Height = 13
+    Caption = 'CNPJ_CPF'
+    FocusControl = DBEdit4
+  end
+  object Label5: TLabel
+    Left = 199
+    Top = 128
+    Width = 69
+    Height = 13
+    Caption = 'PROPIETARIO'
+    FocusControl = DBEdit5
+  end
+  object Label6: TLabel
+    Left = 8
+    Top = 160
+    Width = 55
+    Height = 13
+    Caption = 'TIPOLOGIA'
+  end
+  object Label7: TLabel
+    Left = 8
+    Top = 192
+    Width = 71
+    Height = 13
+    Caption = 'LOCALIZA'#199#195'O'
+    FocusControl = DBEdit7
+  end
+  object Label8: TLabel
+    Left = 8
+    Top = 224
+    Width = 48
+    Height = 13
+    Caption = 'LATITUDE'
+    FocusControl = DBEdit8
+  end
+  object Label9: TLabel
+    Left = 305
+    Top = 224
+    Width = 57
+    Height = 13
+    Caption = 'LONGITUDE'
+    FocusControl = DBEdit9
+  end
+  object Label10: TLabel
+    Left = 8
+    Top = 256
+    Width = 171
+    Height = 13
+    Caption = 'AREA AUTORIZADA PARA LIMPEZA'
+    FocusControl = DBEdit10
+  end
+  object Label11: TLabel
+    Left = 339
+    Top = 256
+    Width = 89
+    Height = 13
+    Caption = 'N'#176' AUTORIZA'#199#195'O'
+    FocusControl = DBEdit11
+  end
+  object Label12: TLabel
+    Left = 8
+    Top = 288
+    Width = 61
+    Height = 13
+    Caption = 'N'#176' PARECER'
+    FocusControl = DBEdit12
+  end
+  object Label13: TLabel
+    Left = 316
+    Top = 288
+    Width = 112
+    Height = 13
+    Caption = 'VALIDADE DA LICEN'#199'A'
+    FocusControl = DBEdit13
+  end
+  object Label14: TLabel
+    Left = 8
+    Top = 328
+    Width = 38
+    Height = 13
+    Caption = 'STATUS'
+  end
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 576
+    Height = 41
+    Align = alTop
+    TabOrder = 0
+    ExplicitWidth = 582
+    object btnNovo: TButton
+      Left = 8
+      Top = 9
+      Width = 75
+      Height = 25
+      Caption = 'NOVO'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 0
+    end
+    object btnSalvar: TButton
+      Left = 89
+      Top = 9
+      Width = 75
+      Height = 25
+      Caption = 'SALVAR'
+      Enabled = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 1
+    end
+    object btnCancelar: TButton
+      Left = 170
+      Top = 9
+      Width = 75
+      Height = 25
+      Caption = 'CANCELAR'
+      Enabled = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 2
+    end
+  end
+  object btnAlterar: TButton
+    Left = 251
+    Top = 9
+    Width = 75
+    Height = 25
+    Caption = 'ALTERAR'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 1
+  end
+  object btnExcluir: TButton
+    Left = 332
+    Top = 9
+    Width = 75
+    Height = 25
+    Caption = 'EXCLUIR'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 2
+  end
+  object btnAtualizar: TButton
+    Left = 413
+    Top = 9
+    Width = 75
+    Height = 25
+    Caption = 'ATUALIZAR'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 3
+  end
+  object btnSair: TButton
+    Left = 494
+    Top = 9
+    Width = 75
+    Height = 25
+    Caption = 'SAIR'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 4
+  end
+  object DBEdit1: TDBEdit
+    Left = 89
+    Top = 53
+    Width = 132
+    Height = 21
+    DataField = 'N_PROT'
+    DataSource = dm.ds_lic_rural
+    TabOrder = 5
+  end
+  object DBEdit2: TDBEdit
+    Left = 426
+    Top = 53
+    Width = 140
+    Height = 21
+    DataField = 'DT_PROT'
+    DataSource = dm.ds_lic_rural
+    MaxLength = 11
+    TabOrder = 6
+  end
+  object DBEdit3: TDBEdit
+    Left = 51
+    Top = 88
+    Width = 515
+    Height = 21
+    DataField = 'IMOVEL'
+    DataSource = dm.ds_lic_rural
+    TabOrder = 7
+  end
+  object DBEdit4: TDBEdit
+    Left = 64
+    Top = 125
+    Width = 127
+    Height = 21
+    DataField = 'CNPJ_CPF'
+    DataSource = dm.ds_lic_rural
+    TabOrder = 8
+  end
+  object DBEdit5: TDBEdit
+    Left = 274
+    Top = 125
+    Width = 292
+    Height = 21
+    DataField = 'PROP'
+    DataSource = dm.ds_lic_rural
+    TabOrder = 9
+  end
+  object DBEdit7: TDBEdit
+    Left = 85
+    Top = 189
+    Width = 481
+    Height = 21
+    DataField = 'LOC'
+    DataSource = dm.ds_lic_rural
+    TabOrder = 10
+  end
+  object DBEdit8: TDBEdit
+    Left = 62
+    Top = 221
+    Width = 198
+    Height = 21
+    DataField = 'LATI'
+    DataSource = dm.ds_lic_rural
+    TabOrder = 11
+  end
+  object DBEdit9: TDBEdit
+    Left = 368
+    Top = 221
+    Width = 198
+    Height = 21
+    DataField = 'LONGI'
+    DataSource = dm.ds_lic_rural
+    TabOrder = 12
+  end
+  object DBEdit10: TDBEdit
+    Left = 185
+    Top = 253
+    Width = 110
+    Height = 21
+    DataField = 'AR_AUT_LIMP'
+    DataSource = dm.ds_lic_rural
+    TabOrder = 13
+  end
+  object DBEdit11: TDBEdit
+    Left = 434
+    Top = 253
+    Width = 132
+    Height = 21
+    DataField = 'N_AUT'
+    DataSource = dm.ds_lic_rural
+    TabOrder = 14
+  end
+  object DBEdit12: TDBEdit
+    Left = 75
+    Top = 285
+    Width = 212
+    Height = 21
+    DataField = 'N_PAR'
+    DataSource = dm.ds_lic_rural
+    TabOrder = 15
+  end
+  object DBEdit13: TDBEdit
+    Left = 434
+    Top = 285
+    Width = 132
+    Height = 21
+    DataField = 'VALID_LIC'
+    DataSource = dm.ds_lic_rural
+    TabOrder = 16
+  end
+  object DBComboBox1: TDBComboBox
+    Left = 69
+    Top = 157
+    Width = 497
+    Height = 21
+    DataField = 'TIPOL'
+    DataSource = dm.ds_lic_rural
+    TabOrder = 17
+  end
+  object DBComboBox2: TDBComboBox
+    Left = 52
+    Top = 325
+    Width = 514
+    Height = 21
+    DataField = 'STATUS'
+    DataSource = dm.ds_lic_rural
+    TabOrder = 18
+  end
+  object DBGrid1: TDBGrid
+    Left = 8
+    Top = 368
+    Width = 558
+    Height = 180
+    DataSource = dm.ds_lic_rural
+    TabOrder = 19
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+  end
+end

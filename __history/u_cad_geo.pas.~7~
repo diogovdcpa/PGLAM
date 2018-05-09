@@ -1,0 +1,54 @@
+unit u_cad_geo;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.Mask,
+  Vcl.DBCtrls, Data.DB, Vcl.Grids, Vcl.DBGrids, udm;
+
+type
+  Tfrm_cad_geo = class(TForm)
+    Panel1: TPanel;
+    btnNovo: TButton;
+    btnSalvar: TButton;
+    btnCancelar: TButton;
+    btnAlterar: TButton;
+    btnExcluir: TButton;
+    btnAtualizar: TButton;
+    btnSair: TButton;
+    Label1: TLabel;
+    DBEdit1: TDBEdit;
+    Label2: TLabel;
+    DBEdit2: TDBEdit;
+    Label3: TLabel;
+    DBEdit3: TDBEdit;
+    Label4: TLabel;
+    DBEdit4: TDBEdit;
+    Label5: TLabel;
+    DBEdit5: TDBEdit;
+    Label6: TLabel;
+    Label7: TLabel;
+    Label8: TLabel;
+    Label9: TLabel;
+    DBEdit9: TDBEdit;
+    Label10: TLabel;
+    DBComboBox1: TDBComboBox;
+    DBComboBox2: TDBComboBox;
+    DBComboBox3: TDBComboBox;
+    DBComboBox4: TDBComboBox;
+    DBGrid1: TDBGrid;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frm_cad_geo: Tfrm_cad_geo;
+
+implementation
+
+{$R *.dfm}
+
+end.

@@ -1,0 +1,946 @@
+object frm_cad_geo: Tfrm_cad_geo
+  Left = 0
+  Top = 0
+  Caption = 'Cadastro de Geotecnologias'
+  ClientHeight = 478
+  ClientWidth = 583
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poScreenCenter
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 8
+    Top = 55
+    Width = 14
+    Height = 16
+    Caption = 'ID'
+    FocusControl = DBEdit1
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 103
+    Top = 55
+    Width = 94
+    Height = 16
+    Caption = 'N'#176' PROTOCOLO'
+    FocusControl = DBEdit2
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 303
+    Top = 55
+    Width = 137
+    Height = 16
+    Caption = 'DATA DO PROTOCOLO'
+    FocusControl = DBEdit3
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label4: TLabel
+    Left = 8
+    Top = 90
+    Width = 147
+    Height = 16
+    Caption = 'NOME / RAZ'#195'O SOCIAL'
+    FocusControl = DBEdit4
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label5: TLabel
+    Left = 8
+    Top = 127
+    Width = 68
+    Height = 16
+    Caption = 'CNPJ / CPF'
+    FocusControl = DBEdit5
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label6: TLabel
+    Left = 8
+    Top = 164
+    Width = 68
+    Height = 16
+    Caption = 'TIPOLOGIA'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label7: TLabel
+    Left = 271
+    Top = 127
+    Width = 123
+    Height = 16
+    Caption = 'GRAU DE POLUI'#199#195'O'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label8: TLabel
+    Left = 8
+    Top = 196
+    Width = 153
+    Height = 16
+    Caption = 'TIPO DE LICENCIAMENTO'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label9: TLabel
+    Left = 8
+    Top = 227
+    Width = 99
+    Height = 16
+    Caption = 'N'#176' DO PARECER'
+    FocusControl = DBEdit9
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label10: TLabel
+    Left = 253
+    Top = 227
+    Width = 48
+    Height = 16
+    Caption = 'STATUS'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 583
+    Height = 41
+    Align = alTop
+    TabOrder = 0
+    object btnNovo: TButton
+      Left = 8
+      Top = 9
+      Width = 75
+      Height = 25
+      Caption = 'NOVO'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 0
+      OnClick = btnNovoClick
+    end
+    object btnSalvar: TButton
+      Left = 89
+      Top = 9
+      Width = 75
+      Height = 25
+      Caption = 'SALVAR'
+      Enabled = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 1
+      OnClick = btnSalvarClick
+    end
+    object btnCancelar: TButton
+      Left = 170
+      Top = 9
+      Width = 75
+      Height = 25
+      Caption = 'CANCELAR'
+      Enabled = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 2
+      OnClick = btnCancelarClick
+    end
+  end
+  object btnAlterar: TButton
+    Left = 251
+    Top = 9
+    Width = 75
+    Height = 25
+    Caption = 'ALTERAR'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 11
+    OnClick = btnAlterarClick
+  end
+  object btnExcluir: TButton
+    Left = 332
+    Top = 9
+    Width = 75
+    Height = 25
+    Caption = 'EXCLUIR'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 12
+    OnClick = btnExcluirClick
+  end
+  object btnAtualizar: TButton
+    Left = 413
+    Top = 9
+    Width = 75
+    Height = 25
+    Caption = 'ATUALIZAR'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 13
+    OnClick = btnAtualizarClick
+  end
+  object btnSair: TButton
+    Left = 494
+    Top = 9
+    Width = 75
+    Height = 25
+    Caption = 'SAIR'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 14
+    OnClick = btnSairClick
+  end
+  object DBEdit1: TDBEdit
+    Left = 28
+    Top = 54
+    Width = 67
+    Height = 21
+    DataField = 'ID'
+    DataSource = dm.ds_geo
+    TabOrder = 1
+  end
+  object DBEdit2: TDBEdit
+    Left = 203
+    Top = 54
+    Width = 92
+    Height = 21
+    DataField = 'N_PROT'
+    DataSource = dm.ds_geo
+    TabOrder = 2
+  end
+  object DBEdit3: TDBEdit
+    Left = 446
+    Top = 54
+    Width = 127
+    Height = 21
+    DataField = 'DT_PROC'
+    DataSource = dm.ds_geo
+    MaxLength = 11
+    TabOrder = 3
+  end
+  object DBEdit4: TDBEdit
+    Left = 161
+    Top = 89
+    Width = 412
+    Height = 21
+    DataField = 'NOME_RS'
+    DataSource = dm.ds_geo
+    TabOrder = 4
+  end
+  object DBEdit5: TDBEdit
+    Left = 82
+    Top = 126
+    Width = 183
+    Height = 21
+    DataField = 'CNPJ_CPF'
+    DataSource = dm.ds_geo
+    TabOrder = 5
+  end
+  object DBEdit9: TDBEdit
+    Left = 113
+    Top = 226
+    Width = 132
+    Height = 21
+    DataField = 'N_PAR'
+    DataSource = dm.ds_geo
+    TabOrder = 9
+  end
+  object DBComboBox1: TDBComboBox
+    Left = 82
+    Top = 163
+    Width = 491
+    Height = 21
+    DataField = 'TIPOL'
+    DataSource = dm.ds_geo
+    Items.Strings = (
+      'Beneficiamento de palmito'
+      'Cultura de ciclo curto'
+      'Cultivo de plantas medicinais e arom'#225'ticas'
+      'Cultura de ciclo longo'
+      'Extra'#231#227'o e Manejo de a'#231'a'#237' '#8211' frutos e palmitos ('#225'rea plantada)'
+      'Cria'#231#227'o de bovinos'
+      'Cria'#231#227'o de bubalinos'
+      'Cria'#231#227'o de equinos'
+      
+        'Cria'#231#227'o de caprinos e ovinos, at'#233' o limite de 2.000 ha de '#225'rea '#250 +
+        'til '
+      'Cria'#231#227'o de su'#237'nos, at'#233' o limite de 2.000 ha de '#225'rea '#250'til'
+      
+        'Avicultura p/ postura e abate (frango, codorna, pinto de um dia,' +
+        ' ovos e outros)'
+      'Cria'#231#227'o de aves, exceto galin'#225'ceos'
+      'Apicultura'
+      'Cunicultura '
+      
+        'Presta'#231#227'o de servi'#231'os fitos sanit'#225'rio com utiliza'#231#227'o de controle' +
+        ' de pragas'
+      'Sistemas Agroflorestal e Agrosilvipastoril'
+      'Viveiros de Mudas'
+      'Reflorestamento'
+      'Manejo de produtos n'#227'o madeireiros '#8211' a'#231'aizais e outros'
+      'Beneficiamento de pescado, marisco e outros'
+      
+        'Piscicultura nativa em tanques e tanque rede, inclusive '#225'reas em' +
+        ' parques aqu'#237'colas'
+      'Piscicultura nativa em viveiro escavado e barragem'
+      'Carcinicultura nativa em viveiro escavado'
+      'Policultivo de piscicultura com carcinicultura-esp'#233'cie nativa'
+      'Cria'#231#227'o de ostras, algas e mexilh'#245'es de esp'#233'cies nativas'
+      'Esta'#231#227'o de larvicultura'
+      'Aquicultura ornamental'
+      'Ranicultura'
+      'Lavra garimpeira (PLG) '#8211' Minerais garimp'#225'veis '
+      'Extra'#231#227'o e beneficiamento de gema'
+      'Pesquisa mineral, sem lavra experimental'
+      
+        'Extra'#231#227'o de areia e seixo, fora de corpos h'#237'dricos, com benefici' +
+        'amento associado'
+      'Extra'#231#227'o de areia, seixo e argila em corpos h'#237'dricos'
+      
+        'Extra'#231#227'o de calc'#225'rio e outros produtos rochosos de aplica'#231#227'o dir' +
+        'eta na agricultura'
+      
+        'Beneficiamento de calc'#225'rio e outros produtos rochosos de aplica'#231 +
+        #227'o direta na agricultura'
+      'Extra'#231#227'o de rocha ornamental (granito/basalto/etc.)'
+      
+        'Extra'#231#227'o de rochas para uso imediato na constru'#231#227'o civil (brita ' +
+        'ou pedra de talhe)'
+      'Frigor'#237'fico '
+      'Matadouro de m'#233'dios e grandes animais'
+      'Matadouros de pequenos animais, exceto aves'
+      'Matadouro com frigor'#237'fico'
+      'Abate de Aves'
+      'Aproveitamento de res'#237'duos de pescado'
+      
+        'Fabrica'#231#227'o de conservas de frutas, legumes e outros vegetais e d' +
+        'e doces'
+      'Beneficiamento de frutas'
+      'Refino / prepara'#231#227'o de '#243'leo e gordura vegetal'
+      'Beneficiamento do leite'
+      'Fabrica'#231#227'o de amidos e f'#233'culas de vegetais e seus derivados'
+      'Fabrica'#231#227'o de caramelos, doces e similares'
+      
+        'Fabrica'#231#227'o de ra'#231#227'o balanceada e alimentos preparados para anima' +
+        'is,'
+      'Beneficiamento de sal mineral para alimenta'#231#227'o animal'
+      'Fabrica'#231#227'o de a'#231#250'car'
+      'Torrefa'#231#227'o e fabrica'#231#227'o de produtos alimentares'
+      'Fabrica'#231#227'o de condimentos'
+      'Beneficiamento e moagem de produtos alimentares '
+      'Fabrica'#231#227'o de produtos de panifica'#231#227'o'
+      'Fabrica'#231#227'o de massas aliment'#237'cias'
+      
+        'Produ'#231#227'o de charqueados, conservas de carnes e gorduras de orige' +
+        'm animal'
+      'Fabrica'#231#227'o de vinagres'
+      'Fabrica'#231#227'o de fermentos e leveduras'
+      'Fabrica'#231#227'o de gelo comum'
+      'Beneficiamento de mel'
+      'Fabrica'#231#227'o de bebidas alco'#243'licas'
+      
+        'Fabrica'#231#227'o de '#225'guas envasadas (engarrafamento de '#225'gua comum, pur' +
+        'ificada adicionada ou n'#227'o sais minerais)'
+      'Fabrica'#231#227'o de refrigerantes'
+      'Fabrica'#231#227'o de ch'#225' mate e outros ch'#225's prontos para consumo'
+      
+        'Fabrica'#231#227'o de refrescos, xaropes e p'#243's para refrescos, exceto re' +
+        'frescos de frutas'
+      'Fabrica'#231#227'o de outras bebidas n'#227'o-alco'#243'licas'
+      
+        'Prepara'#231#227'o do fumo, fabrica'#231#227'o de cigarros, charutos e cigarrilh' +
+        'as, e outras atividades de elabora'#231#227'o do tabaco'
+      
+        'Acabamento de fios e tecidos, n'#227'o processado em fia'#231#245'es e tecela' +
+        'gens'
+      'Beneficiamento de fibras t'#234'xteis, vegetal, animal e sint'#233'tica'
+      'Beneficiamento de fibras'
+      
+        'Fabrica'#231#227'o de artefatos t'#234'xteis produzidos nas fia'#231#245'es e tecelag' +
+        'em'
+      'Confec'#231#227'o e fac'#231#227'o de roupas '#237'ntimas'
+      'Confec'#231#227'o e fac'#231#227'o de pe'#231'as do vestu'#225'rio'
+      'Confec'#231#227'o e Fac'#231#227'o de roupas profissionais'
+      
+        'Fabrica'#231#227'o de acess'#243'rios do vestu'#225'rio, exceto para seguran'#231'a e p' +
+        'rote'#231#227'o'
+      
+        'Fabrica'#231#227'o de artigos do vestu'#225'rio, produzidos em malharias e tr' +
+        'icotagens, exceto meias'
+      'Secagem e salga de peles'
+      
+        'Fabrica'#231#227'o de artigos para viagem, bolsas e semelhantes de qualq' +
+        'uer material'
+      'Fabrica'#231#227'o de artefatos de couro:'
+      
+        'Couro de uso pessoal como porta-notas, porta-documentos e semelh' +
+        'antes'
+      'Selaria e artigos de couro para pequenos animais'
+      'Correias de transmiss'#227'o e artigos de couro para m'#225'quinas'
+      'Pulseiras n'#227'o-met'#225'licas para rel'#243'gios'
+      'Fabrica'#231#227'o de cal'#231'ados:'
+      
+        'Cal'#231'ados de madeira, de tecidos e fibras, de borracha, inclusive' +
+        ' para esporte'
+      
+        'Cal'#231'ados de borracha e de outros materiais para seguran'#231'a pessoa' +
+        'l e profissional'
+      
+        'Fabrica'#231#227'o de artefatos diversos de corti'#231'a, bambu, palha, vime ' +
+        'e outros materiais tran'#231'ados, exceto m'#243'veis'
+      'Fabrica'#231#227'o de papel e papel'#227'o'
+      'Ind'#250'stria de celulose'
+      'Reciclagem de papel'
+      'Fabrica'#231#227'o de produtos do refino de petr'#243'leo '#8211' Usina de asfalto'
+      'Usina de asfalto, inclusive m'#243'vel'
+      'Produ'#231#227'o de bio-combust'#237'vel'
+      'Fabrica'#231#227'o de fertilizantes '
+      
+        'Fabrica'#231#227'o de '#243'leos brutos, de ess'#234'ncias vegetais e de materiais' +
+        ' graxas animais'
+      'Produ'#231#227'o de '#225'lcool'
+      'Fabrica'#231#227'o de resinas pl'#225'sticas e fibras artificiais'
+      'Fabrica'#231#227'o de sab'#245'es e detergentes sint'#233'ticos'
+      
+        'Fabrica'#231#227'o de preparados para limpeza, desinfetantes, inseticida' +
+        's e afins'
+      
+        'Fabrica'#231#227'o de cosm'#233'ticos, produtos de perfumaria e de higiene pe' +
+        'ssoal'
+      'Fabrica'#231#227'o de cola animal'
+      'Fabrica'#231#227'o de artefatos de borracha, inclusive l'#225'tex'
+      'Beneficiamento de borracha natural'
+      'Fabrica'#231#227'o de produtos farmoqu'#237'micos'
+      'Fabrica'#231#227'o de produtos farmac'#234'uticos e medicinais'
+      'Fabrica'#231#227'o de produtos veterin'#225'rios'
+      'Fabrica'#231#227'o de medicamentos alop'#225'ticos para uso humano'
+      'Fabrica'#231#227'o de medicamentos homeop'#225'ticos para uso humano'
+      'Fabrica'#231#227'o de medicamentos fitoter'#225'picos para uso humano'
+      'Fabrica'#231#227'o de prepara'#231#245'es farmac'#234'uticas'
+      'Fabrica'#231#227'o de pneum'#225'ticos e de c'#226'maras-de-ar'
+      'Fabrica'#231#227'o de laminados planos e tubulares de material pl'#225'stico'
+      'Fabrica'#231#227'o de couro sint'#233'tico'
+      'Fabrica'#231#227'o de embalagens de material pl'#225'stico'
+      
+        'Fabrica'#231#227'o de tubos e acess'#243'rios de material pl'#225'stico para uso n' +
+        'a constru'#231#227'o'
+      
+        'Fabrica'#231#227'o de artefatos de material pl'#225'stico para uso pessoal e ' +
+        'dom'#233'stico'
+      
+        'Fabrica'#231#227'o de artefatos de material pl'#225'stico para usos industria' +
+        'is'
+      
+        'Fabrica'#231#227'o de artefatos de material pl'#225'stico para uso na constru' +
+        #231#227'o, exceto tubos e acess'#243'rios'
+      'Fabrica'#231#227'o de artefatos de material pl'#225'stico'
+      'Fabrica'#231#227'o e elabora'#231#227'o de vidro e cristal'
+      'Fabrica'#231#227'o de artigos de vidro'
+      
+        'Fabrica'#231#227'o de artefatos de cer'#226'mica e barro cozido para uso na c' +
+        'onstru'#231#227'o, exceto azulejos e pisos'
+      
+        'Fabrica'#231#227'o de artefatos e outros produtos de concreto, cimento, ' +
+        'fibrocimento, gesso e materiais semelhantes'
+      'Produ'#231#227'o de concreto e argamassa'
+      'Fabrica'#231#227'o de produtos cer'#226'micos refrat'#225'rios'
+      
+        'Aparelhamento de placas e execu'#231#227'o de trabalhos em m'#225'rmore, gran' +
+        'ito, ard'#243'sia e outras pedras'
+      'Britagem de Rochas, n'#227'o associada a outra atividade'
+      'Fabrica'#231#227'o de cal virgem, hidratada ou extinta'
+      'Metalurgia de metais preciosos'
+      'Fabrica'#231#227'o de estruturas met'#225'licas'
+      
+        'Fabrica'#231#227'o de artefatos de funilaria e latoaria em chapas de a'#231'o' +
+        ', ferro, cobre, zinco e folha de flandres'
+      'Fabrica'#231#227'o de m'#243'veis tubulares'
+      'Reciclagem de metal'
+      'Fabrica'#231#227'o de esquadrias de metal'
+      'Produ'#231#227'o de artefatos estampados de metal'
+      'Servi'#231'os de usinagem, solda, tratamento e revestimento em metais'
+      
+        'Fabrica'#231#227'o de artefatos de serralheria art'#237'stica (esquadrias de ' +
+        'metal)'
+      'Fabrica'#231#227'o de artefatos de ferro e a'#231'o'
+      'Fabrica'#231#227'o de ferramentas'
+      
+        'Fabrica'#231#227'o de recipientes de a'#231'o para embalagens de gases, combu' +
+        'st'#237'veis, lubrificantes, lat'#245'es lact'#237'nio, tambores e outros'
+      'Fabrica'#231#227'o de tampas, latas, etc., utilizando folha de flandres'
+      'Fabrica'#231#227'o de l'#226'mpadas'
+      'Usina de co-gera'#231#227'o de energia'
+      'Fabrica'#231#227'o de embarca'#231#245'es e de pe'#231'as e acess'#243'rios (Estaleiro)'
+      'Constru'#231#227'o de embarca'#231#245'es para esporte e lazer'
+      'Fabrica'#231#227'o de equipamentos de transporte'
+      
+        'Ve'#237'culos de tra'#231#227'o animal (carro'#231'as, carros, charretes e semelha' +
+        'ntes);'
+      
+        'Carros e carrinhos de m'#227'o para transporte de carga, para superme' +
+        'rcados;'
+      'T'#233'rmicos para transporte de sorvetes e outros semelhantes'
+      
+        'Desdobro de madeira em tora para madeira serrada/laminada/faquea' +
+        'da'
+      
+        'Desdobro de madeira em tora para produ'#231#227'o de madeira serrada e s' +
+        'eu beneficiamento/secagem'
+      
+        'Desdobro de madeira em tora para produ'#231#227'o de laminas de madeira ' +
+        'para fabrica'#231#227'o de compensados'
+      'Produ'#231#227'o de compensado '
+      'Briqueteiras'
+      'Aproveitamento de aparas de madeireiras'
+      'Fabrica'#231#227'o de m'#243'veis com predomin'#226'ncia de madeira'
+      'Movelaria / Marcenaria / Carpintaria'
+      'Fabrica'#231#227'o de m'#243'veis com predomin'#226'ncia de metal'
+      'Fabrica'#231#227'o de artefatos de joalheria e ourivesaria'
+      
+        'Fabrica'#231#227'o de letras, letreiros, pain'#233'is e placas de qualquer ma' +
+        'terial inclusive luminosos'
+      'Fabrica'#231#227'o de velas'
+      'Fabrica'#231#227'o de produtos diversos, tais como:'
+      'Artefatos de pelos, plumas, chifres e garras, etc.'
+      'Perucas, inclusive c'#237'lios posti'#231'os e afins'
+      'Artigos para festas, carnaval, etc.'
+      'Garrafas t'#233'rmicas e outros recipientes t'#233'rmicos'
+      
+        'Isqueiros de qualquer material e acendedores autom'#225'ticos para fo' +
+        'g'#245'es'
+      'Velas de cera, sebo, estearina, etc.'
+      
+        'Artefatos escolares n'#227'o compreendidos em outros grupos (giz, fig' +
+        'uras geom'#233'tricas, globos e material did'#225'tico em geral)'
+      'Caix'#245'es mortu'#225'rios'
+      
+        'Artefatos diversos n'#227'o especificados ou n'#227'o classificados (adorn' +
+        'os para '#225'rvores de natal, piteiras, cigarreiras, cachimbos, flor' +
+        'es e frutos artificiais, manequins, etc.)'
+      
+        'Manuten'#231#227'o e repara'#231#227'o de m'#225'quinas e aparelhos de refrigera'#231#227'o e' +
+        ' ventila'#231#227'o para uso industrial e comercial'
+      'Fabrica'#231#227'o de motores de combust'#227'o interna'
+      
+        'Fabrica'#231#227'o de m'#225'quinas, aparelhos, pe'#231'as e equipamentos n'#227'o el'#233't' +
+        'ricos para transmiss'#227'o e instala'#231#227'o hidr'#225'ulica, pneum'#225'ticas, t'#233'r' +
+        'micas, de ventila'#231#227'o, de refrigera'#231#227'o e outros'
+      
+        'Fabrica'#231#227'o de m'#225'quinas, aparelhos, pe'#231'as e acess'#243'rios com / sem ' +
+        'tratamento t'#233'rmico e/ou tratamento de superf'#237'cie e/ou fundi'#231#227'o'
+      
+        'Fabrica'#231#227'o de aparelhos e equipamentos el'#233'tricos para utiliza'#231#227'o' +
+        ' dom'#233'stica ou industrial'
+      'Rede de Distribui'#231#227'o rural - RDR'
+      'Micro e pequena central hidrel'#233'trica a fio d'#8217#225'gua'
+      'Subesta'#231#227'o'
+      'Linha de subtransmiss'#227'o'
+      'Atividades relacionadas a esgoto, exceto a gest'#227'o de redes'
+      'Interceptores e emiss'#225'rios de esgoto industrial'
+      
+        'Interceptores e emiss'#225'rios de esgotos sanit'#225'rio (Popula'#231#227'o atend' +
+        'ida pelo sistema)'
+      
+        'Coleta, transporte, esta'#231#227'o elevat'#243'ria, tratamento e destina'#231#227'o ' +
+        'final de esgotos sanit'#225'rio (Popula'#231#227'o atendida pelo sistema)'
+      'Shopping Center'
+      'Edifica'#231#227'o multifamiliar vertical'
+      'Edifica'#231#227'o unifamiliar, em '#225'reas protegidas ou sens'#237'veis'
+      'Hiper e Supermercado'
+      'Obras de urbaniza'#231#227'o - ruas, pra'#231'as e cal'#231'adas'
+      'Barras, embocadura, retifica'#231#227'o e aberturas de canais'
+      
+        'Barragem e/ou dique para forma'#231#227'o de a'#231'ude e/ou pereniza'#231#227'o de l' +
+        'ago'
+      
+        'Capta'#231#227'o / Tratamento / Distribui'#231#227'o de '#225'gua pot'#225'vel, sem o uso ' +
+        'de barragem de acumula'#231#227'o '
+      
+        'Complexo de destina'#231#227'o final de res'#237'duos s'#243'lidos urbanos '#8211' Aterr' +
+        'o, reciclagem e compostagem (Popula'#231#227'o atendida pelo sistema)'
+      'Aterro sanit'#225'rio, sem fracionamento (Popula'#231#227'o atendida)'
+      'Aterro controlado, sem fracionamento (Popula'#231#227'o atendida)'
+      'Reciclagem'
+      'Triagem e compostagem'
+      'Sistema de drenagem de '#225'guas pluviais'
+      'Aut'#243'dromo e cart'#243'dromo'
+      'Hip'#243'dromo'
+      'Cais / muro de arrimo ou conten'#231#227'o, sem urbaniza'#231#227'o'
+      'Cais / muro de arrimo ou conten'#231#227'o, com urbaniza'#231#227'o'
+      'Cemit'#233'rio'
+      'Penitenci'#225'ria e Centros de Recupera'#231#227'o de Infratores'
+      
+        'Instala'#231#227'o portu'#225'ria de passageiros, de carga geral (n'#227'o perigos' +
+        'a), de finalidade tur'#237'stica, trapiche, ancoradouro, rampa de ace' +
+        'sso e marina'
+      'Aer'#243'dromo '#8211' pista de pouso'
+      'Heliporto / heliponto'
+      'Ponte e pontilh'#227'o, em corpo h'#237'drico, sem navegabilidade'
+      
+        'Servi'#231'os de manuten'#231#227'o e repara'#231#227'o el'#233'trica de ve'#237'culos automoto' +
+        'res'
+      
+        'Servi'#231'os de lavagem, lubrifica'#231#227'o e polimento de ve'#237'culos automo' +
+        'tores'
+      'Oficina mec'#226'nica, lanternagem e pintura'
+      
+        'Lavagem de ve'#237'culos, lubrifica'#231#227'o, polimento, lava-jato e troca ' +
+        'de '#243'leo'
+      'Com'#233'rcio atacadista de '#225'gua mineral'
+      'Com'#233'rcio atacadista de cerveja, chope e refrigerante'
+      
+        'Com'#233'rcio atacadista de bebidas com atividade de fracionamento e ' +
+        'acondicionamento associada'
+      
+        'Com'#233'rcio atacadista de outras bebidas alco'#243'licas - vinhos, cacha' +
+        #231'as, bebidas destiladas, etc. e n'#227'o alco'#243'licas'
+      'Com'#233'rcio atacadista de madeira e produtos derivados '#8211' Est'#226'ncias'
+      
+        'Com'#233'rcio atacadista de defensivos agr'#237'colas, adubos, fertilizant' +
+        'es e corretivos do solo'
+      
+        'Com'#233'rcio atacadista de mercadorias em geral, com predomin'#226'ncia d' +
+        'e insumos agropecu'#225'rios'
+      
+        'Com'#233'rcio varejista de mercadorias em geral, com predomin'#226'ncia de' +
+        ' produtos aliment'#237'cios '#8211' supermercados'
+      'Padaria e confeitaria com predomin'#226'ncia de produ'#231#227'o pr'#243'pria'
+      'Com'#233'rcio varejista de carnes '#8211' a'#231'ougues'
+      
+        'Terminal ou entreposto de recep'#231#227'o de armazenamento, comercializ' +
+        'a'#231#227'o e/ou frigorifica'#231#227'o de pescado'
+      'Com'#233'rcio varejista de combust'#237'veis para ve'#237'culos automotores '
+      'Com'#233'rcio varejista de lubrificantes'
+      
+        'Com'#233'rcio varejista de g'#225's liq'#252'efeito de petr'#243'leo (glp) '#8211' g'#225's/bot' +
+        'ij'#245'es de 13 Kg '
+      'Garagem de '#244'nibus / transportadora e seus anexos'
+      'Armaz'#233'm para gr'#227'os/cereais/material de constru'#231#227'o'
+      
+        'Armaz'#233'm para gr'#227'os/cereais/material de constru'#231#227'o, com beneficia' +
+        'mento'
+      'Dep'#243'sito de agrot'#243'xico'
+      'Hot'#233'is'
+      'Apart-hot'#233'is'
+      'Mot'#233'is'
+      'Albergues'
+      'Pousada'
+      'Campings'
+      'Infraestrutura especializada em turismo de pesca esportiva '
+      'Pens'#245'es'
+      'Outros alojamentos:'
+      'Alojamento em dormit'#243'rios'
+      'O aluguel de im'#243'veis residenciais por curta temporada'
+      
+        'Alojamentos coletivos n'#227'o tur'#237'sticos tipo casa de estudante, pen' +
+        'sionato e similares'
+      'A explora'#231#227'o de vag'#245'es-leito por terceiros'
+      'Alojamento de curta dura'#231#227'o'
+      'Parque tem'#225'tico/divers'#227'o'
+      'Hotel de Ecoturismo/hotel fazenda'
+      'Bares e outros estabelecimentos especializados em servir bebidas'
+      'Lanchonetes, casas de ch'#225', de sucos e similares'
+      'Quiosque (barraca) de praia'
+      'Telefonia celular'
+      
+        'Parcelamento do solo/Loteamento/Desmembramento, sem fracionament' +
+        'o'
+      'Condom'#237'nio habitacional horizontal, sem fracionamento'
+      'Conjunto habitacional popular'
+      'Limpeza em pr'#233'dios e em domic'#237'lios'
+      'Imuniza'#231#227'o e controle de pragas urbanas'
+      'Casas de festas e eventos'
+      'Explota'#231#227'o e envase de '#225'gua mineral'
+      
+        'Unidade de atendimento hospitalar, de atendimento em pronto-soco' +
+        'rro e urg'#234'ncias'
+      'Laborat'#243'rios de anatomia patol'#243'gica e citol'#243'gica'
+      'Laborat'#243'rios cl'#237'nicos'
+      'Laborat'#243'rio de an'#225'lises biol'#243'gicas e f'#237'sico-qu'#237'micas '
+      
+        'Servi'#231'os de diagn'#243'stico por imagem com uso de radia'#231#227'o ionizante' +
+        ', exceto tomografia'
+      'Servi'#231'os de resson'#226'ncia magn'#233'tica'
+      
+        'Servi'#231'os de diagn'#243'stico por imagem sem uso de radia'#231#227'o ionizante' +
+        ', exceto resson'#226'ncia magn'#233'tica'
+      
+        'Servi'#231'os de diagn'#243'stico por registro gr'#225'fico - ECG, EEG e outros' +
+        ' exames an'#225'logos'
+      
+        'Servi'#231'os de diagn'#243'stico por m'#233'todos '#243'pticos - endoscopia e outro' +
+        's exames an'#225'logos'
+      'Servi'#231'os de quimioterapia e radioterapia '
+      'Servi'#231'os de hemoterapia'
+      'Servi'#231'os de litotripcia'
+      'Servi'#231'os de bancos de c'#233'lulas e tecidos humanos'
+      
+        'Atividades de servi'#231'os de complementa'#231#227'o diagn'#243'stica e terap'#234'uti' +
+        'ca n'#227'o especificadas anteriormente'
+      'Jardim bot'#226'nico '
+      'Complexo tur'#237'stico'
+      'Centro receptivo'
+      
+        'Repara'#231#227'o e manuten'#231#227'o de equipamentos eletroeletr'#244'nicos de uso ' +
+        'pessoal e dom'#233'stico'
+      'Lavanderias'
+      
+        'Servi'#231'os de acabamento com tinturaria, tingimento e estamparia e' +
+        ' outros'
+      'Toalheiros'
+      
+        'Prensagem de material recicl'#225'vel / enfardamento, tritura'#231#227'o e ou' +
+        'tros'
+      'Com'#233'rcio de subst'#226'ncias e produtos perigosos'
+      'Presta'#231#227'o de servi'#231'os com subst'#226'ncias e produtos perigosos'
+      
+        'Supress'#227'o de vegeta'#231#227'o para obras de infraestrutura de impacto l' +
+        'ocal'
+      
+        'Remedia'#231#227'o de '#225'reas contaminadas por lan'#231'amento de res'#237'duos s'#243'li' +
+        'dos urbanos'
+      
+        'Remedia'#231#227'o de '#225'reas contaminadas por hidrocarboneto e/ou subst'#226'n' +
+        'cias e produtos perigosos'
+      'Fechamento de minas')
+    TabOrder = 7
+  end
+  object DBComboBox2: TDBComboBox
+    Left = 167
+    Top = 199
+    Width = 406
+    Height = 21
+    DataField = 'TIPO_LIC'
+    DataSource = dm.ds_geo
+    Items.Strings = (
+      'SUPRESS'#195'O VEGETAL'
+      'LIMPEZA DE VEGETA'#199#195'O'
+      'LAR')
+    TabOrder = 8
+  end
+  object DBComboBox3: TDBComboBox
+    Left = 400
+    Top = 126
+    Width = 173
+    Height = 21
+    DataField = 'GR_POL'
+    DataSource = dm.ds_geo
+    Items.Strings = (
+      'I'
+      'II'
+      'III')
+    TabOrder = 6
+  end
+  object DBComboBox4: TDBComboBox
+    Left = 309
+    Top = 226
+    Width = 264
+    Height = 21
+    DataField = 'STATUS'
+    DataSource = dm.ds_geo
+    Items.Strings = (
+      'PENDENTE'
+      'EM ANALISE'
+      'APROVADO'
+      'REPROVADO'
+      'NOTIFICADO')
+    TabOrder = 10
+  end
+  object DBGrid1: TDBGrid
+    Left = 8
+    Top = 264
+    Width = 567
+    Height = 206
+    DataSource = dm.ds_geo
+    TabOrder = 15
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'ID'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -11
+        Title.Font.Name = 'Tahoma'
+        Title.Font.Style = [fsBold]
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'N_PROT'
+        Title.Caption = 'N'#176' PROTOCOLO'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -11
+        Title.Font.Name = 'Tahoma'
+        Title.Font.Style = [fsBold]
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'DT_PROC'
+        Title.Caption = 'DATA PROTOCOLO'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -11
+        Title.Font.Name = 'Tahoma'
+        Title.Font.Style = [fsBold]
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'NOME_RS'
+        Title.Caption = 'NOME / RAZ'#195'O SOCIAL'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -11
+        Title.Font.Name = 'Tahoma'
+        Title.Font.Style = [fsBold]
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'CNPJ_CPF'
+        Title.Caption = 'CNPJ / CPF'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -11
+        Title.Font.Name = 'Tahoma'
+        Title.Font.Style = [fsBold]
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'TIPOL'
+        Title.Caption = 'TIPOLOGIA'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -11
+        Title.Font.Name = 'Tahoma'
+        Title.Font.Style = [fsBold]
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'GR_POL'
+        Title.Caption = 'GRAU DE POLUI'#199#195'O'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -11
+        Title.Font.Name = 'Tahoma'
+        Title.Font.Style = [fsBold]
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'TIPO_LIC'
+        Title.Caption = 'TIPO DE LICEN'#199'A'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -11
+        Title.Font.Name = 'Tahoma'
+        Title.Font.Style = [fsBold]
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'N_PAR'
+        Title.Caption = 'N'#176' PARECER'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -11
+        Title.Font.Name = 'Tahoma'
+        Title.Font.Style = [fsBold]
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'STATUS'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -11
+        Title.Font.Name = 'Tahoma'
+        Title.Font.Style = [fsBold]
+        Visible = True
+      end>
+  end
+end

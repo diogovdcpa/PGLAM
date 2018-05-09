@@ -1,0 +1,29 @@
+unit udmRel;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, udm, frxClass, frxDBSet;
+
+type
+  TdmRel = class(TDataModule)
+    frxReport: TfrxReport;
+    frxDBds_protocolo: TfrxDBDataset;
+    frxDBds_denuncia: TfrxDBDataset;
+    frxDBDataset1: TfrxDBDataset;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  dmRel: TdmRel;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+{$R *.dfm}
+
+end.

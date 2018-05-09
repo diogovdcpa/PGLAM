@@ -1,0 +1,245 @@
+unit u_menu;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, u_cad_protocolo, udmRel,
+  u_con_cad_protocolo, Vcl.Imaging.jpeg, Vcl.ExtCtrls, u_cad_denuncia,
+  u_con_cad_denuncia, u_cad_fiscalizacao, u_cad_geo, u_cad_lic_rural,
+  u_cad_lic_amb, u_con_cad_fiscalizacao, u_con_cad_geo, u_con_cad_lic_rural,
+  u_con_cad_lic_amb;
+
+type
+  Tfrm_menu = class(TForm)
+    MainMenu1: TMainMenu;
+    Cadastro1: TMenuItem;
+    Protocolo1: TMenuItem;
+    Denuncias1: TMenuItem;
+    Fiscalizao1: TMenuItem;
+    Geotecnologia1: TMenuItem;
+    LicRural1: TMenuItem;
+    LicAmbiental1: TMenuItem;
+    Consulta1: TMenuItem;
+    Relatorio1: TMenuItem;
+    CadastrodeProtocolos1: TMenuItem;
+    Protocolo2: TMenuItem;
+    Image1: TImage;
+    Denuncia1: TMenuItem;
+    Fiscalizao2: TMenuItem;
+    Geotecnologia2: TMenuItem;
+    LicRural2: TMenuItem;
+    LicAmbiental2: TMenuItem;
+    Denuncias2: TMenuItem;
+    Fiscalizao3: TMenuItem;
+    Geotecnologias1: TMenuItem;
+    LicRural3: TMenuItem;
+    LicAmbiental3: TMenuItem;
+    procedure Protocolo1Click(Sender: TObject);
+    procedure CadastrodeProtocolos1Click(Sender: TObject);
+    procedure Protocolo2Click(Sender: TObject);
+    procedure Denuncias1Click(Sender: TObject);
+    procedure Denuncia1Click(Sender: TObject);
+    procedure Fiscalizao1Click(Sender: TObject);
+    procedure Geotecnologia1Click(Sender: TObject);
+    procedure LicRural1Click(Sender: TObject);
+    procedure LicAmbiental1Click(Sender: TObject);
+    procedure Fiscalizao2Click(Sender: TObject);
+    procedure Geotecnologia2Click(Sender: TObject);
+    procedure LicRural2Click(Sender: TObject);
+    procedure LicAmbiental2Click(Sender: TObject);
+    procedure Denuncias2Click(Sender: TObject);
+    procedure Fiscalizao3Click(Sender: TObject);
+    procedure Geotecnologias1Click(Sender: TObject);
+    procedure LicRural3Click(Sender: TObject);
+    procedure LicAmbiental3Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frm_menu: Tfrm_menu;
+
+implementation
+
+{$R *.dfm}
+
+procedure Tfrm_menu.CadastrodeProtocolos1Click(Sender: TObject);
+begin
+dmRel := TdmRel.Create(nil);
+try
+  dmRel.frxReport.LoadFromFile(ExtractFilePath(Application.ExeName)+'rel\rel_cad_protocolos.fr3');
+  dmRel.frxReport.ShowReport(True);
+finally
+  FreeAndNil(dmRel);
+end;
+
+end;
+
+procedure Tfrm_menu.Denuncia1Click(Sender: TObject);
+begin
+frm_con_cad_denuncia.ShowModal;
+end;
+
+procedure Tfrm_menu.Denuncias1Click(Sender: TObject);
+begin
+  try
+    Application.CreateForm(Tfrm_cad_denuncia,frm_cad_denuncia);
+    frm_cad_denuncia.ShowModal;
+  finally
+    FreeAndNil(frm_cad_denuncia);
+  end;
+end;
+
+procedure Tfrm_menu.Denuncias2Click(Sender: TObject);
+begin
+begin
+dmRel := TdmRel.Create(nil);
+try
+  dmRel.frxReport.LoadFromFile(ExtractFilePath(Application.ExeName)+'rel\rel_cad_denuncia.fr3');
+  dmRel.frxReport.ShowReport(True);
+finally
+  FreeAndNil(dmRel);
+end;
+
+end;
+end;
+
+procedure Tfrm_menu.Fiscalizao1Click(Sender: TObject);
+begin
+  try
+    Application.CreateForm(Tfrm_cad_fiscalizacao,frm_cad_fiscalizacao);
+    frm_cad_fiscalizacao.ShowModal;
+  finally
+    FreeAndNil(frm_cad_fiscalizacao);
+  end;
+end;
+
+procedure Tfrm_menu.Fiscalizao2Click(Sender: TObject);
+begin
+frm_con_cad_fiscalizacao.ShowModal;
+end;
+
+procedure Tfrm_menu.Fiscalizao3Click(Sender: TObject);
+begin
+begin
+dmRel := TdmRel.Create(nil);
+try
+  dmRel.frxReport.LoadFromFile(ExtractFilePath(Application.ExeName)+'rel\rel_cad_fiscalizacao.fr3');
+  dmRel.frxReport.ShowReport(True);
+finally
+  FreeAndNil(dmRel);
+end;
+
+end;
+end;
+
+procedure Tfrm_menu.Geotecnologia1Click(Sender: TObject);
+begin
+  try
+    Application.CreateForm(Tfrm_cad_geo,frm_cad_geo);
+  finally
+    FreeAndNil(frm_cad_geo);
+  end;
+end;
+
+procedure Tfrm_menu.Geotecnologia2Click(Sender: TObject);
+begin
+frm_con_cad_geo.ShowModal;
+end;
+
+procedure Tfrm_menu.Geotecnologias1Click(Sender: TObject);
+begin
+begin
+dmRel := TdmRel.Create(nil);
+try
+  dmRel.frxReport.LoadFromFile(ExtractFilePath(Application.ExeName)+'rel\rel_cad_geo.fr3');
+  dmRel.frxReport.ShowReport(True);
+finally
+  FreeAndNil(dmRel);
+end;
+
+end;
+end;
+
+procedure Tfrm_menu.LicAmbiental1Click(Sender: TObject);
+begin
+  try
+    Application.CreateForm(Tfrm_cad_lic_amb,frm_cad_lic_amb);
+    frm_cad_lic_amb.ShowModal;
+  finally
+    FreeAndNil(frm_cad_lic_amb);
+  end;
+end;
+
+procedure Tfrm_menu.LicAmbiental2Click(Sender: TObject);
+begin
+frm_con_cad_lic_amb.ShowModal;
+end;
+
+procedure Tfrm_menu.LicAmbiental3Click(Sender: TObject);
+begin
+begin
+dmRel := TdmRel.Create(nil);
+try
+  dmRel.frxReport.LoadFromFile(ExtractFilePath(Application.ExeName)+'rel\rel_cad_lic_amb.fr3');
+  dmRel.frxReport.ShowReport(True);
+finally
+  FreeAndNil(dmRel);
+end;
+
+end;
+end;
+
+procedure Tfrm_menu.LicRural1Click(Sender: TObject);
+begin
+  try
+    Application.CreateForm(Tfrm_cad_lic_rural,frm_cad_lic_rural);
+    frm_cad_lic_rural.ShowModal;
+  finally
+    FreeAndNil(frm_cad_lic_rural);
+  end;
+end;
+
+procedure Tfrm_menu.LicRural2Click(Sender: TObject);
+begin
+frm_con_cad_lic_rural.ShowModal;
+end;
+
+procedure Tfrm_menu.LicRural3Click(Sender: TObject);
+begin
+begin
+dmRel := TdmRel.Create(nil);
+try
+  dmRel.frxReport.LoadFromFile(ExtractFilePath(Application.ExeName)+'rel\rel_cad_lic_rural.fr3');
+  dmRel.frxReport.ShowReport(True);
+finally
+  FreeAndNil(dmRel);
+end;
+
+end;
+end;
+
+procedure Tfrm_menu.Protocolo1Click(Sender: TObject);
+begin
+  try
+    Application.CreateForm(Tfrm_cad_protocolo,frm_cad_protocolo);
+    frm_cad_protocolo.ShowModal;
+  finally
+    FreeAndNil(frm_cad_protocolo);
+  end;
+end;
+
+procedure Tfrm_menu.Protocolo2Click(Sender: TObject);
+begin
+  try
+    Application.Create(Tfrm_con_cad_protocolo,frm_con_cad_protocolo);
+    frm_con_cad_protocolo.ShowModal;
+  finally
+    FreeAndNil(frm_con_cad_fiscalizacao);
+  end;
+end;
+
+end.

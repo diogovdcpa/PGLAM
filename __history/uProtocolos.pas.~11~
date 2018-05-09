@@ -1,0 +1,124 @@
+unit uProtocolos;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, udm, Data.DB, Vcl.Grids, Vcl.DBGrids,
+  Vcl.DBCtrls, Vcl.ExtCtrls, Vcl.StdCtrls, Vcl.Mask;
+
+type
+  TfrmProtocolos = class(TForm)
+    Panel1: TPanel;
+    Button1: TButton;
+    Panel2: TPanel;
+    Panel3: TPanel;
+    DBNavigator1: TDBNavigator;
+    DBGrid1: TDBGrid;
+    Label1: TLabel;
+    DBEdit1: TDBEdit;
+    Label2: TLabel;
+    DBEdit2: TDBEdit;
+    Label3: TLabel;
+    DBEdit3: TDBEdit;
+    Label4: TLabel;
+    DBEdit4: TDBEdit;
+    Label5: TLabel;
+    DBEdit5: TDBEdit;
+    Label6: TLabel;
+    DBEdit6: TDBEdit;
+    Label7: TLabel;
+    DBEdit7: TDBEdit;
+    Label8: TLabel;
+    DBEdit8: TDBEdit;
+    Label9: TLabel;
+    DBEdit9: TDBEdit;
+    Label10: TLabel;
+    DBEdit10: TDBEdit;
+    Label11: TLabel;
+    DBEdit11: TDBEdit;
+    Label12: TLabel;
+    DBEdit12: TDBEdit;
+    Label13: TLabel;
+    DBEdit13: TDBEdit;
+    Label14: TLabel;
+    DBEdit14: TDBEdit;
+    Panel4: TPanel;
+    novo: TButton;
+    salvar: TButton;
+    cancelar: TButton;
+    alterar: TButton;
+    excluir: TButton;
+    procedure Button1Click(Sender: TObject);
+    procedure novoClick(Sender: TObject);
+    procedure salvarClick(Sender: TObject);
+    procedure cancelarClick(Sender: TObject);
+    procedure alterarClick(Sender: TObject);
+    procedure excluirClick(Sender: TObject);
+    procedure FormKeyPress(Sender: TObject; var Key: Char);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmProtocolos: TfrmProtocolos;
+
+implementation
+
+{$R *.dfm}
+procedure muda;
+begin
+  frmProtocolos.novo.Enabled := not frmProtocolos.novo.Enabled;
+  frmProtocolos.salvar.Enabled := not frmProtocolos.salvar.Enabled;
+  frmProtocolos.cancelar.Enabled := not frmProtocolos.cancelar.Enabled;
+  frmProtocolos.excluir.Enabled := not frmProtocolos.excluir.Enabled;
+  frmProtocolos.alterar.Enabled := not frmProtocolos.alterar.Enabled;
+end;
+
+procedure TfrmProtocolos.Button1Click(Sender: TObject);
+begin
+close;
+end;
+
+procedure TfrmProtocolos.novoClick(Sender: TObject);
+begin
+dm.tb_protocolos.Insert;
+end;
+
+procedure TfrmProtocolos.salvarClick(Sender: TObject);
+begin
+dm.tb_protocolos.Post;
+end;
+
+procedure TfrmProtocolos.cancelarClick(Sender: TObject);
+begin
+dm.tb_protocolos.Cancel;
+end;
+
+procedure TfrmProtocolos.alterarClick(Sender: TObject);
+begin
+dm.tb_protocolos.Edit;
+end;
+
+procedure TfrmProtocolos.excluirClick(Sender: TObject);
+begin
+if MessageDlg('Deseja Exluir ?',mtInformation,[mbYes,mbNo],0)= mrYes then
+  begin
+    dm.tb_protocolos.Delete;
+  end;
+end;
+procedure TfrmProtocolos.FormKeyPress(Sender: TObject; var Key: Char);
+begin
+// verifica se a tecla pressionada é a tecla ENTER, conhecida pelo Delphi como #13
+if key=#13 then
+  begin
+  // se for, passa o foco para o proximo campo,zerando o valor da variavel key
+  key:=#0;
+  Perform(WM_NEXTDLGCTL,0,0);
+  end;
+
+end;
+
+end.

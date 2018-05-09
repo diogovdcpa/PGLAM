@@ -1,0 +1,67 @@
+unit u_con_cad_lic_rural;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, udm, Data.DB, Vcl.Grids, Vcl.DBGrids,
+  Vcl.StdCtrls, Vcl.ExtCtrls;
+
+type
+  Tfrm_con_cad_lic_rural = class(TForm)
+    Panel1: TPanel;
+    Label1: TLabel;
+    Edit1: TEdit;
+    ComboBox1: TComboBox;
+    DBGrid1: TDBGrid;
+    procedure Edit1Change(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frm_con_cad_lic_rural: Tfrm_con_cad_lic_rural;
+
+implementation
+
+{$R *.dfm}
+
+procedure Tfrm_con_cad_lic_rural.Edit1Change(Sender: TObject);
+begin
+  begin
+    if ComboBox1.Text=('N° PROTOCOLO')then
+      begin
+        dm.tb_lic_rural.Locate('N_PROT',Edit1.Text,[loPartialKey,loCaseInsensitive]);
+      end;
+
+    if ComboBox1.Text=('N° PROCESSO')then
+      begin
+        dm.tb_lic_rural.Locate('N_PROC',Edit1.Text,[loPartialKey,loCaseInsensitive]);
+      end;
+
+    if ComboBox1.Text=('DATA PROTOCOLO')then
+      begin
+        dm.tb_lic_rural.Locate('DT_PROT',Edit1.Text,[loPartialKey,loCaseInsensitive]);
+      end;
+
+    if ComboBox1.Text=('NOME IMOVEL')then
+      begin
+        dm.tb_lic_rural.Locate('IMOVEL',Edit1.Text,[loPartialKey,loCaseInsensitive]);
+      end;
+
+    if ComboBox1.Text=('CNPJ / CPF')then
+      begin
+        dm.tb_lic_rural.Locate('CNPJ_CPF',Edit1.Text,[loPartialKey,loCaseInsensitive]);
+      end;
+
+    if ComboBox1.Text=('NOME PROPRIETARIO')then
+      begin
+        dm.tb_lic_rural.Locate('PROP',Edit1.Text,[loPartialKey,loCaseInsensitive]);
+      end;
+
+  end;
+end;
+
+end.

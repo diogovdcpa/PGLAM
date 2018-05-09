@@ -1,0 +1,461 @@
+object frmProtocolos: TfrmProtocolos
+  Left = 0
+  Top = 0
+  Caption = 'Protocolos'
+  ClientHeight = 459
+  ClientWidth = 913
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  KeyPreview = True
+  OldCreateOrder = False
+  Position = poScreenCenter
+  OnKeyPress = FormKeyPress
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 913
+    Height = 41
+    Align = alTop
+    TabOrder = 0
+    object DBNavigator1: TDBNavigator
+      Left = 1
+      Top = 1
+      Width = 911
+      Height = 39
+      DataSource = dm.ds_protocolos
+      Align = alClient
+      TabOrder = 0
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Top = 41
+    Width = 913
+    Height = 184
+    Align = alTop
+    TabOrder = 1
+    object Label1: TLabel
+      Left = 14
+      Top = 13
+      Width = 49
+      Height = 13
+      Caption = 'N_ORDEM'
+      FocusControl = DBEdit1
+    end
+    object Label2: TLabel
+      Left = 76
+      Top = 13
+      Width = 76
+      Height = 13
+      Caption = 'N_PROTOCOLO'
+      FocusControl = txtnprotocolo
+    end
+    object Label3: TLabel
+      Left = 165
+      Top = 13
+      Width = 67
+      Height = 13
+      Caption = 'N_PROCESSO'
+      FocusControl = DBEdit3
+    end
+    object Label4: TLabel
+      Left = 248
+      Top = 13
+      Width = 96
+      Height = 13
+      Caption = 'DATA_PROTOCOLO'
+      FocusControl = DBEdit4
+    end
+    object Label5: TLabel
+      Left = 360
+      Top = 13
+      Width = 176
+      Height = 13
+      Caption = 'EMPREENDIMENTO_RAZAO_SOCIAL'
+      FocusControl = DBEdit5
+    end
+    object Label6: TLabel
+      Left = 552
+      Top = 13
+      Width = 55
+      Height = 13
+      Caption = 'TIPOLOGIA'
+      FocusControl = DBEdit6
+    end
+    object Label7: TLabel
+      Left = 624
+      Top = 13
+      Width = 109
+      Height = 13
+      Caption = 'SETOR_RESPONSAVEL'
+      FocusControl = DBEdit7
+    end
+    object Label8: TLabel
+      Left = 752
+      Top = 13
+      Width = 73
+      Height = 13
+      Caption = 'TIPO_LICENCA'
+      FocusControl = DBEdit8
+    end
+    object Label9: TLabel
+      Left = 14
+      Top = 72
+      Width = 53
+      Height = 13
+      Caption = 'NATUREZA'
+      FocusControl = DBEdit9
+    end
+    object Label10: TLabel
+      Left = 112
+      Top = 72
+      Width = 88
+      Height = 13
+      Caption = 'ARQUIVO_FISICO'
+      FocusControl = DBEdit10
+    end
+    object Label11: TLabel
+      Left = 222
+      Top = 72
+      Width = 39
+      Height = 13
+      Caption = 'GAVETA'
+      FocusControl = DBEdit11
+    end
+    object Label12: TLabel
+      Left = 312
+      Top = 72
+      Width = 92
+      Height = 13
+      Caption = 'NUMERO_LICENCA'
+      FocusControl = DBEdit12
+    end
+    object Label13: TLabel
+      Left = 424
+      Top = 72
+      Width = 49
+      Height = 13
+      Caption = 'VALIDADE'
+      FocusControl = DBEdit13
+    end
+    object Label14: TLabel
+      Left = 520
+      Top = 72
+      Width = 114
+      Height = 13
+      Caption = 'DATA_ARQUIVAMENTO'
+      FocusControl = DBEdit14
+    end
+    object DBEdit1: TDBEdit
+      Left = 14
+      Top = 32
+      Width = 49
+      Height = 21
+      DataField = 'N_ORDEM'
+      DataSource = dm.ds_protocolos
+      TabOrder = 0
+    end
+    object txtnprotocolo: TDBEdit
+      Left = 76
+      Top = 32
+      Width = 76
+      Height = 21
+      DataField = 'N_PROTOCOLO'
+      DataSource = dm.ds_protocolos
+      TabOrder = 1
+    end
+    object DBEdit3: TDBEdit
+      Left = 165
+      Top = 32
+      Width = 67
+      Height = 21
+      DataField = 'N_PROCESSO'
+      DataSource = dm.ds_protocolos
+      TabOrder = 2
+    end
+    object DBEdit4: TDBEdit
+      Left = 248
+      Top = 32
+      Width = 94
+      Height = 21
+      DataField = 'DATA_PROTOCOLO'
+      DataSource = dm.ds_protocolos
+      MaxLength = 11
+      TabOrder = 3
+    end
+    object DBEdit5: TDBEdit
+      Left = 360
+      Top = 32
+      Width = 176
+      Height = 21
+      DataField = 'EMPREENDIMENTO_RAZAO_SOCIAL'
+      DataSource = dm.ds_protocolos
+      TabOrder = 4
+    end
+    object DBEdit6: TDBEdit
+      Left = 552
+      Top = 32
+      Width = 55
+      Height = 21
+      DataField = 'TIPOLOGIA'
+      DataSource = dm.ds_protocolos
+      TabOrder = 5
+    end
+    object DBEdit7: TDBEdit
+      Left = 624
+      Top = 32
+      Width = 109
+      Height = 21
+      DataField = 'SETOR_RESPONSAVEL'
+      DataSource = dm.ds_protocolos
+      TabOrder = 6
+    end
+    object DBEdit8: TDBEdit
+      Left = 752
+      Top = 32
+      Width = 153
+      Height = 21
+      DataField = 'TIPO_LICENCA'
+      DataSource = dm.ds_protocolos
+      TabOrder = 7
+    end
+    object DBEdit9: TDBEdit
+      Left = 14
+      Top = 91
+      Width = 81
+      Height = 21
+      DataField = 'NATUREZA'
+      DataSource = dm.ds_protocolos
+      TabOrder = 8
+    end
+    object DBEdit10: TDBEdit
+      Left = 112
+      Top = 91
+      Width = 104
+      Height = 21
+      DataField = 'ARQUIVO_FISICO'
+      DataSource = dm.ds_protocolos
+      TabOrder = 9
+    end
+    object DBEdit11: TDBEdit
+      Left = 222
+      Top = 91
+      Width = 75
+      Height = 21
+      DataField = 'GAVETA'
+      DataSource = dm.ds_protocolos
+      TabOrder = 10
+    end
+    object DBEdit12: TDBEdit
+      Left = 312
+      Top = 91
+      Width = 92
+      Height = 21
+      DataField = 'NUMERO_LICENCA'
+      DataSource = dm.ds_protocolos
+      TabOrder = 11
+    end
+    object DBEdit13: TDBEdit
+      Left = 424
+      Top = 91
+      Width = 73
+      Height = 21
+      DataField = 'VALIDADE'
+      DataSource = dm.ds_protocolos
+      TabOrder = 12
+    end
+    object DBEdit14: TDBEdit
+      Left = 520
+      Top = 91
+      Width = 134
+      Height = 21
+      DataField = 'DATA_ARQUIVAMENTO'
+      DataSource = dm.ds_protocolos
+      TabOrder = 13
+    end
+    object Panel4: TPanel
+      Left = 1
+      Top = 144
+      Width = 911
+      Height = 39
+      Align = alBottom
+      TabOrder = 14
+      object novo: TButton
+        Left = 4
+        Top = 8
+        Width = 75
+        Height = 25
+        Caption = 'NOVO'
+        TabOrder = 0
+        OnClick = novoClick
+      end
+      object salvar: TButton
+        Left = 85
+        Top = 8
+        Width = 75
+        Height = 25
+        Caption = 'SALVAR'
+        Enabled = False
+        TabOrder = 1
+        OnClick = salvarClick
+      end
+      object cancelar: TButton
+        Left = 166
+        Top = 8
+        Width = 75
+        Height = 25
+        Caption = 'CANCELAR'
+        Enabled = False
+        TabOrder = 2
+        OnClick = cancelarClick
+      end
+      object alterar: TButton
+        Left = 246
+        Top = 8
+        Width = 75
+        Height = 25
+        Caption = 'ALTERAR'
+        TabOrder = 3
+        OnClick = alterarClick
+      end
+      object excluir: TButton
+        Left = 327
+        Top = 8
+        Width = 75
+        Height = 25
+        Caption = 'EXCLUIR'
+        TabOrder = 4
+        OnClick = excluirClick
+      end
+    end
+  end
+  object Panel3: TPanel
+    Left = 0
+    Top = 225
+    Width = 913
+    Height = 234
+    Align = alClient
+    TabOrder = 2
+    object Button1: TButton
+      Left = 830
+      Top = 243
+      Width = 75
+      Height = 25
+      Caption = 'Sair'
+      TabOrder = 0
+      OnClick = Button1Click
+    end
+    object DBGrid1: TDBGrid
+      Left = 14
+      Top = 6
+      Width = 891
+      Height = 231
+      DataSource = dm.ds_protocolos
+      TabOrder = 1
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -11
+      TitleFont.Name = 'Tahoma'
+      TitleFont.Style = []
+      Columns = <
+        item
+          Alignment = taCenter
+          Expanded = False
+          FieldName = 'N_ORDEM'
+          Title.Caption = 'ID'
+          Width = 20
+          Visible = True
+        end
+        item
+          Alignment = taCenter
+          Expanded = False
+          FieldName = 'N_PROTOCOLO'
+          Title.Caption = 'N'#176' PROTOCOLO'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'N_PROCESSO'
+          Title.Caption = 'N'#176' PROCESSO'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'DATA_PROTOCOLO'
+          Title.Caption = 'DATA PROTOCOLO'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'EMPREENDIMENTO_RAZAO_SOCIAL'
+          Title.Caption = 'EMPREENDIMENTO RAZAO SOCIAL'
+          Width = 250
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'TIPOLOGIA'
+          Width = 250
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'SETOR_RESPONSAVEL'
+          Title.Caption = 'SETOR RESPONSAVEL'
+          Width = 130
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'TIPO_LICENCA'
+          Title.Caption = 'TIPO DE LICENCA'
+          Width = 150
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'NATUREZA'
+          Width = 150
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'ARQUIVO_FISICO'
+          Title.Caption = 'ARQUIVO FISICO'
+          Width = 100
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'GAVETA'
+          Width = 80
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'NUMERO_LICENCA'
+          Title.Caption = 'NUMERO LICENCA'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'VALIDADE'
+          Width = 100
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'DATA_ARQUIVAMENTO'
+          Title.Caption = 'DATA ARQUIVAMENTO'
+          Width = 120
+          Visible = True
+        end>
+    end
+  end
+end

@@ -1,0 +1,129 @@
+unit u_cad_lic_amb;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, Data.DB,
+  Vcl.Mask, Vcl.DBCtrls, udm, Vcl.Grids, Vcl.DBGrids;
+
+type
+  Tfrm_cad_lic_amb = class(TForm)
+    Panel1: TPanel;
+    btnNovo: TButton;
+    btnSalvar: TButton;
+    btnCancelar: TButton;
+    btnAlterar: TButton;
+    btnExcluir: TButton;
+    btnAtualizar: TButton;
+    btnSair: TButton;
+    Label1: TLabel;
+    DBEdit1: TDBEdit;
+    Label2: TLabel;
+    DBEdit2: TDBEdit;
+    Label3: TLabel;
+    DBEdit3: TDBEdit;
+    Label4: TLabel;
+    DBEdit4: TDBEdit;
+    Label5: TLabel;
+    DBEdit5: TDBEdit;
+    Label6: TLabel;
+    DBEdit6: TDBEdit;
+    Label7: TLabel;
+    DBEdit7: TDBEdit;
+    Label8: TLabel;
+    DBEdit8: TDBEdit;
+    Label9: TLabel;
+    DBEdit9: TDBEdit;
+    Label10: TLabel;
+    Label11: TLabel;
+    DBEdit11: TDBEdit;
+    Label12: TLabel;
+    DBEdit12: TDBEdit;
+    Label13: TLabel;
+    DBEdit13: TDBEdit;
+    Label14: TLabel;
+    DBEdit14: TDBEdit;
+    Label15: TLabel;
+    DBEdit15: TDBEdit;
+    DBGrid1: TDBGrid;
+    cb_tipo_lic: TDBComboBox;
+    procedure btnNovoClick(Sender: TObject);
+    procedure btnSalvarClick(Sender: TObject);
+    procedure btnCancelarClick(Sender: TObject);
+    procedure btnAtualizarClick(Sender: TObject);
+    procedure btnSairClick(Sender: TObject);
+    procedure btnExcluirClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frm_cad_lic_amb: Tfrm_cad_lic_amb;
+
+implementation
+
+{$R *.dfm}
+procedure muda;
+begin
+  frm_cad_lic_amb.btnNovo.Enabled:= not frm_cad_lic_amb.btnNovo.Enabled;
+  frm_cad_lic_amb.btnSalvar.Enabled:= not frm_cad_lic_amb.btnSalvar.Enabled;
+  frm_cad_lic_amb.btnCancelar.Enabled:= not frm_cad_lic_amb.btnCancelar.Enabled;
+  frm_cad_lic_amb.btnAlterar.Enabled:= not frm_cad_lic_amb.btnAlterar.Enabled;
+  frm_cad_lic_amb.btnExcluir.Enabled:= not frm_cad_lic_amb.btnExcluir.Enabled;
+end;
+
+procedure Tfrm_cad_lic_amb.btnAtualizarClick(Sender: TObject);
+begin
+dm.tb_lic_amb.Refresh;
+end;
+
+procedure Tfrm_cad_lic_amb.btnCancelarClick(Sender: TObject);
+begin
+dm.tb_lic_amb.Cancel;
+muda;
+end;
+
+procedure Tfrm_cad_lic_amb.btnExcluirClick(Sender: TObject);
+begin
+  if MessageDlg('Deseja Excluir ?',mtConfirmation,[mbYes,mbNo],0)=mrYes then
+  begin
+    dm.tb_lic_amb.Delete;
+  end;
+end;
+
+procedure Tfrm_cad_lic_amb.btnNovoClick(Sender: TObject);
+var
+  codigo:Integer;
+begin
+muda;
+// mudamos o ponteiro para o ultimo registro
+dm.tb_lic_amb.Last;
+// nossa variavel recebe o campo (0) que é o código
+codigo:=dm.tb_lic_amb.Fields[0].AsInteger;
+dm.tb_lic_amb.Insert;
+// nossa variavel recebe ela mais 1
+codigo:=codigo+1;
+// nossa caixa de texto recebe nossa variavel convertida
+DBEdit1.Text:=IntToStr(codigo);
+// caixa de texto N°PROTOCOLO RECEBE FOCO
+DBEdit2.SetFocus;
+end;
+
+procedure Tfrm_cad_lic_amb.btnSairClick(Sender: TObject);
+begin
+close;
+end;
+
+procedure Tfrm_cad_lic_amb.btnSalvarClick(Sender: TObject);
+begin
+dm.tb_lic_amb.post;
+muda;
+end;
+
+
+end.
+
+

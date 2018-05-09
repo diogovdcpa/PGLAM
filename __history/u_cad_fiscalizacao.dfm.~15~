@@ -1,0 +1,314 @@
+object frm_cad_fiscalizacao: Tfrm_cad_fiscalizacao
+  Left = 0
+  Top = 0
+  Caption = 'Fiscaliza'#231#227'o'
+  ClientHeight = 538
+  ClientWidth = 582
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 8
+    Top = 61
+    Width = 14
+    Height = 16
+    Caption = 'ID'
+    FocusControl = DBEdit1
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 175
+    Top = 61
+    Width = 130
+    Height = 16
+    Caption = 'NATUREZA DA A'#199#195'O'
+    FocusControl = DBEdit2
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 8
+    Top = 96
+    Width = 94
+    Height = 16
+    Caption = 'N'#176' PROTOCOLO'
+    FocusControl = DBEdit3
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label4: TLabel
+    Left = 285
+    Top = 96
+    Width = 137
+    Height = 16
+    Caption = 'DATA DO PROTOCOLO'
+    FocusControl = DBEdit4
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label5: TLabel
+    Left = 8
+    Top = 128
+    Width = 129
+    Height = 16
+    Caption = 'ORDEM DE SERVI'#199'O:'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object DBEdit1: TDBEdit
+    Left = 28
+    Top = 60
+    Width = 134
+    Height = 21
+    DataField = 'ID'
+    DataSource = dm.ds_fiscalizacao
+    TabOrder = 0
+  end
+  object DBEdit2: TDBEdit
+    Left = 311
+    Top = 60
+    Width = 264
+    Height = 21
+    DataField = 'NAT_ACAO'
+    DataSource = dm.ds_fiscalizacao
+    TabOrder = 1
+  end
+  object DBEdit3: TDBEdit
+    Left = 108
+    Top = 95
+    Width = 165
+    Height = 21
+    DataField = 'N_PROT'
+    DataSource = dm.ds_fiscalizacao
+    TabOrder = 2
+  end
+  object DBEdit4: TDBEdit
+    Left = 428
+    Top = 95
+    Width = 147
+    Height = 21
+    DataField = 'DT_PROT'
+    DataSource = dm.ds_fiscalizacao
+    TabOrder = 3
+  end
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 582
+    Height = 41
+    Align = alTop
+    TabOrder = 4
+    object btnNovo: TButton
+      Left = 8
+      Top = 9
+      Width = 75
+      Height = 25
+      Caption = 'NOVO'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 0
+      OnClick = btnNovoClick
+    end
+    object btnSalvar: TButton
+      Left = 89
+      Top = 9
+      Width = 75
+      Height = 25
+      Caption = 'SALVAR'
+      Enabled = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 1
+      OnClick = btnSalvarClick
+    end
+    object btnCancelar: TButton
+      Left = 170
+      Top = 9
+      Width = 75
+      Height = 25
+      Caption = 'CANCELAR'
+      Enabled = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 2
+      OnClick = btnCancelarClick
+    end
+  end
+  object btnAlterar: TButton
+    Left = 251
+    Top = 9
+    Width = 75
+    Height = 25
+    Caption = 'ALTERAR'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 5
+    OnClick = btnAlterarClick
+  end
+  object btnExcluir: TButton
+    Left = 332
+    Top = 9
+    Width = 75
+    Height = 25
+    Caption = 'EXCLUIR'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 6
+    OnClick = btnExcluirClick
+  end
+  object btnAtualizar: TButton
+    Left = 413
+    Top = 9
+    Width = 75
+    Height = 25
+    Caption = 'ATUALIZAR'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 7
+    OnClick = btnAtualizarClick
+  end
+  object btnSair: TButton
+    Left = 494
+    Top = 9
+    Width = 75
+    Height = 25
+    Caption = 'SAIR'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 8
+    OnClick = btnSairClick
+  end
+  object DBMemo1: TDBMemo
+    Left = 8
+    Top = 150
+    Width = 567
+    Height = 131
+    DataField = 'OS'
+    DataSource = dm.ds_fiscalizacao
+    TabOrder = 9
+  end
+  object DBGrid1: TDBGrid
+    Left = 8
+    Top = 287
+    Width = 561
+    Height = 243
+    DataSource = dm.ds_fiscalizacao
+    TabOrder = 10
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'ID'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -11
+        Title.Font.Name = 'Tahoma'
+        Title.Font.Style = [fsBold]
+        Width = 30
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'NAT_ACAO'
+        Title.Caption = 'NATUREZA DA A'#199#195'O'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -11
+        Title.Font.Name = 'Tahoma'
+        Title.Font.Style = [fsBold]
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'N_PROT'
+        Title.Caption = 'N'#176' PROTOCOLO'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -11
+        Title.Font.Name = 'Tahoma'
+        Title.Font.Style = [fsBold]
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'DT_PROT'
+        Title.Caption = 'DATA DO PROTOCOLO'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -11
+        Title.Font.Name = 'Tahoma'
+        Title.Font.Style = [fsBold]
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'OS'
+        Title.Caption = 'ORDEM DE SERVI'#199'O'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -11
+        Title.Font.Name = 'Tahoma'
+        Title.Font.Style = [fsBold]
+        Visible = True
+      end>
+  end
+end

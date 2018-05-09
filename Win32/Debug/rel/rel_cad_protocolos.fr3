@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<TfrxReport Version="5.1.5" DotMatrixReport="False" IniFile="\Software\Fast Reports" PreviewOptions.Buttons="4095" PreviewOptions.Zoom="1" PrintOptions.Printer="Default" PrintOptions.PrintOnSheet="0" ReportOptions.CreateDate="43177,6322249074" ReportOptions.Description.Text="" ReportOptions.LastChange="43205,4199292245" ScriptLanguage="PascalScript" ScriptText.Text="begin&#13;&#10;&#13;&#10;end.">
+  <Datasets>
+    <item DataSet="frxDBds_protocolo" DataSetName="frxDBds_protocolo"/>
+  </Datasets>
+  <TfrxDataPage Name="Data" Height="1000" Left="0" Top="0" Width="1000"/>
+  <TfrxReportPage Name="Page1" PaperWidth="210" PaperHeight="297" PaperSize="9" LeftMargin="10" RightMargin="10" TopMargin="10" BottomMargin="10" ColumnWidth="0" ColumnPositions.Text="" HGuides.Text="" VGuides.Text="">
+    <TfrxReportTitle Name="ReportTitle1" FillType="ftBrush" FillGap.Top="0" FillGap.Left="0" FillGap.Bottom="0" FillGap.Right="0" Height="22,67718" Left="0" Top="18,89765" Width="718,1107">
+      <TfrxMemoView Name="Memo1" Align="baCenter" Left="266,456865" Top="0" Width="185,19697" Height="18,89765" Font.Charset="1" Font.Color="0" Font.Height="-16" Font.Name="Arial" Font.Style="1" ParentFont="False" Text="Relatorio de Protocolos"/>
+      <TfrxMemoView Name="Date" Left="627,40198" Top="0" Width="79,37013" Height="18,89765" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Arial" Font.Style="1" ParentFont="False" Text="[Date]"/>
+      <TfrxMemoView Name="Page" Left="7,55906" Top="0" Width="79,37013" Height="18,89765" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Arial" Font.Style="1" ParentFont="False" Text="[Page]"/>
+    </TfrxReportTitle>
+    <TfrxMasterData Name="MasterData1" FillType="ftBrush" FillGap.Top="0" FillGap.Left="0" FillGap.Bottom="0" FillGap.Right="0" Font.Charset="1" Font.Color="0" Font.Height="-11" Font.Name="Arial" Font.Style="0" Height="234,33086" Left="0" ParentFont="False" Top="102,04731" Width="718,1107" ColumnWidth="0" ColumnGap="0" DataSet="frxDBds_protocolo" DataSetName="frxDBds_protocolo" RowCount="0">
+      <TfrxMemoView Name="Memo2" Left="7,55906" Top="7,55906" Width="22,67718" Height="18,89765" Text="ID :"/>
+      <TfrxMemoView Name="frxDBds_protocoloID" Left="30,23624" Top="7,55906" Width="37,7953" Height="18,89765" DataField="ID" DataSet="frxDBds_protocolo" DataSetName="frxDBds_protocolo" Font.Charset="1" Font.Color="0" Font.Height="-11" Font.Name="Arial" Font.Style="1" ParentFont="False" Text="[frxDBds_protocolo.&#34;ID&#34;]"/>
+      <TfrxMemoView Name="Memo3" Left="79,37013" Top="7,55906" Width="94,48825" Height="18,89765" Text="N° PROTOCOLO"/>
+      <TfrxMemoView Name="frxDBds_protocoloN_PROT" Left="177,63791" Top="7,55906" Width="71,81107" Height="18,89765" DataField="N_PROT" DataSet="frxDBds_protocolo" DataSetName="frxDBds_protocolo" Font.Charset="1" Font.Color="0" Font.Height="-11" Font.Name="Arial" Font.Style="1" ParentFont="False" Text="[frxDBds_protocolo.&#34;N_PROT&#34;]"/>
+      <TfrxMemoView Name="Memo4" Left="264,11039" Top="7,55906" Width="94,48825" Height="18,89765" Text="N° PROCESSO :"/>
+      <TfrxMemoView Name="Memo5" Left="453,5436" Top="7,55906" Width="128,50402" Height="18,89765" Text="DATA DE PROTOCOLO :"/>
+      <TfrxMemoView Name="Memo6" Left="7,55906" Top="37,7953" Width="158,74026" Height="18,89765" Text="EMPRESA / RAZAO SOCIAL :"/>
+      <TfrxMemoView Name="Memo7" Left="7,55906" Top="80,25201" Width="71,81107" Height="18,89765" Text="TIPOLOGIA :"/>
+      <TfrxMemoView Name="Memo8" Left="7,55906" Top="110,48825" Width="136,06308" Height="18,89765" Text="SETOR RESPONSAVEL :"/>
+      <TfrxMemoView Name="Memo9" Left="7,55906" Top="140,72449" Width="109,60637" Height="18,89765" Text="TIPO DE LICENÇA :"/>
+      <TfrxMemoView Name="frxDBds_protocoloN_PROC" Left="362,37817" Top="7,55906" Width="75,5906" Height="18,89765" DataField="N_PROC" DataSet="frxDBds_protocolo" DataSetName="frxDBds_protocolo" Font.Charset="1" Font.Color="0" Font.Height="-11" Font.Name="Arial" Font.Style="1" ParentFont="False" Text="[frxDBds_protocolo.&#34;N_PROC&#34;]"/>
+      <TfrxMemoView Name="frxDBds_protocoloDT_PROT" Left="585,82715" Top="7,55906" Width="109,60637" Height="18,89765" DataField="DT_PROT" DataSet="frxDBds_protocolo" DataSetName="frxDBds_protocolo" Font.Charset="1" Font.Color="0" Font.Height="-11" Font.Name="Arial" Font.Style="1" ParentFont="False" Text="[frxDBds_protocolo.&#34;DT_PROT&#34;]"/>
+      <TfrxMemoView Name="frxDBds_protocoloEMP_RS" Left="170,07885" Top="37,7953" Width="400,63018" Height="18,89765" DataField="EMP_RS" DataSet="frxDBds_protocolo" DataSetName="frxDBds_protocolo" Font.Charset="1" Font.Color="0" Font.Height="-11" Font.Name="Arial" Font.Style="1" ParentFont="False" Text="[frxDBds_protocolo.&#34;EMP_RS&#34;]"/>
+      <TfrxMemoView Name="frxDBds_protocoloTIPOL" Left="83,14966" Top="80,25201" Width="400,63018" Height="18,89765" DataField="TIPOL" DataSet="frxDBds_protocolo" DataSetName="frxDBds_protocolo" Font.Charset="1" Font.Color="0" Font.Height="-11" Font.Name="Arial" Font.Style="1" ParentFont="False" Text="[frxDBds_protocolo.&#34;TIPOL&#34;]"/>
+      <TfrxMemoView Name="frxDBds_protocoloST_RESP" Left="154,96073" Top="110,48825" Width="400,63018" Height="18,89765" DataField="ST_RESP" DataSet="frxDBds_protocolo" DataSetName="frxDBds_protocolo" Font.Charset="1" Font.Color="0" Font.Height="-11" Font.Name="Arial" Font.Style="1" ParentFont="False" Text="[frxDBds_protocolo.&#34;ST_RESP&#34;]"/>
+      <TfrxMemoView Name="frxDBds_protocoloTIPO_LIC" Left="120,94496" Top="140,72449" Width="400,63018" Height="18,89765" DataField="TIPO_LIC" DataSet="frxDBds_protocolo" DataSetName="frxDBds_protocolo" Font.Charset="1" Font.Color="0" Font.Height="-11" Font.Name="Arial" Font.Style="1" ParentFont="False" Text="[frxDBds_protocolo.&#34;TIPO_LIC&#34;]"/>
+      <TfrxMemoView Name="Memo10" Left="7,55906" Top="167,1812" Width="71,81107" Height="18,89765" Text="NATUREZA :"/>
+      <TfrxMemoView Name="frxDBds_protocoloNAT" Left="86,92919" Top="167,1812" Width="170,07885" Height="18,89765" DataField="NAT" DataSet="frxDBds_protocolo" DataSetName="frxDBds_protocolo" Font.Charset="1" Font.Color="0" Font.Height="-11" Font.Name="Arial" Font.Style="1" ParentFont="False" Text="[frxDBds_protocolo.&#34;NAT&#34;]"/>
+      <TfrxMemoView Name="Memo11" Left="264,5671" Top="167,1812" Width="94,48825" Height="18,89765" Text="ARQUIVO FISICO :"/>
+      <TfrxMemoView Name="frxDBds_protocoloARQ_FISI" Left="366,61441" Top="167,1812" Width="117,16543" Height="18,89765" DataField="ARQ_FISI" DataSet="frxDBds_protocolo" DataSetName="frxDBds_protocolo" Font.Charset="1" Font.Color="0" Font.Height="-11" Font.Name="Arial" Font.Style="1" ParentFont="False" Text="[frxDBds_protocolo.&#34;ARQ_FISI&#34;]"/>
+      <TfrxMemoView Name="frxDBds_protocoloGAV" Left="593,38621" Top="167,1812" Width="109,60637" Height="18,89765" DataField="GAV" DataSet="frxDBds_protocolo" DataSetName="frxDBds_protocolo" Font.Charset="1" Font.Color="0" Font.Height="-11" Font.Name="Arial" Font.Style="1" ParentFont="False" Text="[frxDBds_protocolo.&#34;GAV&#34;]"/>
+      <TfrxMemoView Name="Memo12" Left="532,91373" Top="167,1812" Width="56,69295" Height="18,89765" Text="GAVETA :"/>
+      <TfrxMemoView Name="Memo13" Left="7,55906" Top="197,41744" Width="94,48825" Height="18,89765" Text="N° DA LICENÇA :"/>
+      <TfrxMemoView Name="frxDBds_protocoloN_LIC" Left="109,60637" Top="197,41744" Width="79,37013" Height="18,89765" DataField="N_LIC" DataSet="frxDBds_protocolo" DataSetName="frxDBds_protocolo" Font.Charset="1" Font.Color="0" Font.Height="-11" Font.Name="Arial" Font.Style="1" ParentFont="False" Text="[frxDBds_protocolo.&#34;N_LIC&#34;]"/>
+      <TfrxMemoView Name="frxDBds_protocoloVALID" Left="272,12616" Top="197,41744" Width="147,40167" Height="18,89765" DataField="VALID" DataSet="frxDBds_protocolo" DataSetName="frxDBds_protocolo" Font.Charset="1" Font.Color="0" Font.Height="-11" Font.Name="Arial" Font.Style="1" ParentFont="False" Text="[frxDBds_protocolo.&#34;VALID&#34;]"/>
+      <TfrxMemoView Name="Memo14" Left="200,31509" Top="197,41744" Width="68,03154" Height="18,89765" Text="VALIDADE :"/>
+      <TfrxMemoView Name="Memo15" Left="427,08689" Top="197,41744" Width="113,3859" Height="18,89765" Text="DATA DE ARQUIVO :"/>
+      <TfrxMemoView Name="frxDBds_protocoloDT_ARQ" Left="544,25232" Top="197,41744" Width="86,92919" Height="18,89765" DataField="DT_ARQ" DataSet="frxDBds_protocolo" DataSetName="frxDBds_protocolo" Font.Charset="1" Font.Color="0" Font.Height="-11" Font.Name="Arial" Font.Style="1" ParentFont="False" Text="[frxDBds_protocolo.&#34;DT_ARQ&#34;]"/>
+      <TfrxLineView Name="Line2" Left="0" Top="0" Width="718,1107" Height="0" Color="0" Frame.Typ="4"/>
+      <TfrxMemoView Name="frxDBds_protocoloCNPJ" Left="49,13389" Top="56,69295" Width="158,74026" Height="18,89765" DataField="CNPJ" DataSet="frxDBds_protocolo" DataSetName="frxDBds_protocolo" Font.Charset="1" Font.Color="0" Font.Height="-11" Font.Name="Arial" Font.Style="1" ParentFont="False" Text="[frxDBds_protocolo.&#34;CNPJ&#34;]"/>
+      <TfrxMemoView Name="Memo16" Left="7,55906" Top="56,69295" Width="37,7953" Height="18,89765" Text="CNPJ"/>
+    </TfrxMasterData>
+  </TfrxReportPage>
+</TfrxReport>

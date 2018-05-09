@@ -1,0 +1,43 @@
+unit u_cad_fiscalizacao;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, udm, Vcl.StdCtrls, Vcl.ExtCtrls,
+  Vcl.Mask, Vcl.DBCtrls;
+
+type
+  Tfrm_cad_fiscalizacao = class(TForm)
+    Label1: TLabel;
+    DBEdit1: TDBEdit;
+    Label2: TLabel;
+    DBEdit2: TDBEdit;
+    Label3: TLabel;
+    DBEdit3: TDBEdit;
+    Label4: TLabel;
+    DBEdit4: TDBEdit;
+    Label5: TLabel;
+    DBEdit5: TDBEdit;
+    Panel1: TPanel;
+    btnNovo: TButton;
+    btnSalvar: TButton;
+    btnCancelar: TButton;
+    btnAlterar: TButton;
+    btnExcluir: TButton;
+    btnAtualizar: TButton;
+    btnSair: TButton;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frm_cad_fiscalizacao: Tfrm_cad_fiscalizacao;
+
+implementation
+
+{$R *.dfm}
+
+end.

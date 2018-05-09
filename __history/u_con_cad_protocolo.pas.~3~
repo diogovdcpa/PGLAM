@@ -1,0 +1,25 @@
+unit u_con_cad_protocolo;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, udm, Data.DB, Vcl.Grids, Vcl.DBGrids;
+
+type
+  Tfrm_con_cad_protocolo = class(TForm)
+    DBGrid1: TDBGrid;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frm_con_cad_protocolo: Tfrm_con_cad_protocolo;
+
+implementation
+
+{$R *.dfm}
+
+end.
